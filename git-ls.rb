@@ -5,21 +5,21 @@
 class GitLs < Formula
   desc "list the files in the current directory along with a useful summary and helpful hyperlinks."
   homepage "https://github.com/llimllib/git-ls"
-  version "2.0.0"
+  version "3.0.0"
   license "Unlicense"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/llimllib/git-ls/releases/download/v2.0.0/git-ls_Darwin_x86_64.tar.gz"
-      sha256 "068b65a6a76bc2e63d43a8cb180244523043af3ae6ddad0b35a0460f3d9d7c95"
+      url "https://github.com/llimllib/git-ls/releases/download/v3.0.0/git-ls_Darwin_x86_64.tar.gz"
+      sha256 "9ba02fc3f4e5dcc51327422bf3a325cca4223e367ed6322ed49d2f16f8bc0fc4"
 
       def install
         bin.install "git-ls"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/llimllib/git-ls/releases/download/v2.0.0/git-ls_Darwin_arm64.tar.gz"
-      sha256 "73d2d9d751dee18145e1886b3be25f9c91bfa7d85dc12367dc1f2dfb7f6aeaa6"
+      url "https://github.com/llimllib/git-ls/releases/download/v3.0.0/git-ls_Darwin_arm64.tar.gz"
+      sha256 "52a4c1ed1b700065b4e82cc1aa3d15bb5ab57defe82924f0f4338a88de6f2f3d"
 
       def install
         bin.install "git-ls"
@@ -29,16 +29,16 @@ class GitLs < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/llimllib/git-ls/releases/download/v2.0.0/git-ls_Linux_x86_64.tar.gz"
-      sha256 "8bfaeed520402fc2d433f9a39929f920196978ba3db36b8bd81d0bead2960bf1"
+      url "https://github.com/llimllib/git-ls/releases/download/v3.0.0/git-ls_Linux_x86_64.tar.gz"
+      sha256 "6b03fee9f6f9222ee0da52faa4d557851d0d20cae1f95e09e6e99a3261b92fa3"
 
       def install
         bin.install "git-ls"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/llimllib/git-ls/releases/download/v2.0.0/git-ls_Linux_arm64.tar.gz"
-      sha256 "774c773f730a9fe2dfe8eb303c45cea3e08fcd537238ba22bf442d88841ebae9"
+      url "https://github.com/llimllib/git-ls/releases/download/v3.0.0/git-ls_Linux_arm64.tar.gz"
+      sha256 "f50ab8b422a7a26bb119b5bc001d2f8ea0d2e7f3ca36c8c7598f667582f392b8"
 
       def install
         bin.install "git-ls"
