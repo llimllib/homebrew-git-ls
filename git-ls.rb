@@ -5,21 +5,21 @@
 class GitLs < Formula
   desc "list the files in the current directory along with a useful summary and helpful hyperlinks."
   homepage "https://github.com/llimllib/git-ls"
-  version "3.1.0"
+  version "3.4.0"
   license "Unlicense"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/llimllib/git-ls/releases/download/v3.1.0/git-ls_Darwin_x86_64.tar.gz"
-      sha256 "45008db1c5aa007ed401455178b855aadd05c6b4002e707fa769ecefb964b4ec"
+      url "https://github.com/llimllib/git-ls/releases/download/v3.4.0/git-ls_Darwin_x86_64.tar.gz"
+      sha256 "97de3a706fc21c08a612ae5021edb24cf9f3d8db93617bd07f505ab336c975f7"
 
       def install
         bin.install "git-ls"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/llimllib/git-ls/releases/download/v3.1.0/git-ls_Darwin_arm64.tar.gz"
-      sha256 "81f1577304c4e41c9298d863f735c7d825f8fa12d573ff22fcee853fcf5b4f36"
+      url "https://github.com/llimllib/git-ls/releases/download/v3.4.0/git-ls_Darwin_arm64.tar.gz"
+      sha256 "f78b7e09c88fc90dc8e56df5cfa9c44859a6348e91222779b9c8508b37fbc6f0"
 
       def install
         bin.install "git-ls"
@@ -28,18 +28,16 @@ class GitLs < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/llimllib/git-ls/releases/download/v3.1.0/git-ls_Linux_x86_64.tar.gz"
-      sha256 "52ddd3198ed0e3d2f55617eb9d4979d1734aacc2c578cee1f50d439a6861b47c"
-
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/llimllib/git-ls/releases/download/v3.4.0/git-ls_Linux_x86_64.tar.gz"
+      sha256 "ee83433fa165378c0e3b892f110dd0392b4a0dccfc9d0f3ead6bf609f9936ebe"
       def install
         bin.install "git-ls"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/llimllib/git-ls/releases/download/v3.1.0/git-ls_Linux_arm64.tar.gz"
-      sha256 "c7978bfff800f8ef79462aa8dce273c65eb58b9e620f0007d597e370c6f753c9"
-
+      url "https://github.com/llimllib/git-ls/releases/download/v3.4.0/git-ls_Linux_arm64.tar.gz"
+      sha256 "2352dcb09dedb38e5bd8c7fcdeb0bd090a95b6dc16c28e37cb2e6f1eaf597b9f"
       def install
         bin.install "git-ls"
       end
