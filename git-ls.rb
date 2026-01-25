@@ -5,21 +5,21 @@
 class GitLs < Formula
   desc "list the files in the current directory along with a useful summary and helpful hyperlinks."
   homepage "https://github.com/llimllib/git-ls"
-  version "3.4.0"
+  version "3.5.0"
   license "Unlicense"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/llimllib/git-ls/releases/download/v3.4.0/git-ls_Darwin_x86_64.tar.gz"
-      sha256 "97de3a706fc21c08a612ae5021edb24cf9f3d8db93617bd07f505ab336c975f7"
+      url "https://github.com/llimllib/git-ls/releases/download/v3.5.0/git-ls_Darwin_x86_64.tar.gz"
+      sha256 "9c5ceef0adcbe6e3749fa9974f98ba817a1c70d393b448a318acc8d7485f83bb"
 
       def install
         bin.install "git-ls"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/llimllib/git-ls/releases/download/v3.4.0/git-ls_Darwin_arm64.tar.gz"
-      sha256 "f78b7e09c88fc90dc8e56df5cfa9c44859a6348e91222779b9c8508b37fbc6f0"
+      url "https://github.com/llimllib/git-ls/releases/download/v3.5.0/git-ls_Darwin_arm64.tar.gz"
+      sha256 "3d2dfb5e420d9e143bba2b93b6e2fe13d39eaf0a5c91d32b56bc80fa28a5c12b"
 
       def install
         bin.install "git-ls"
@@ -29,15 +29,15 @@ class GitLs < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/llimllib/git-ls/releases/download/v3.4.0/git-ls_Linux_x86_64.tar.gz"
-      sha256 "ee83433fa165378c0e3b892f110dd0392b4a0dccfc9d0f3ead6bf609f9936ebe"
+      url "https://github.com/llimllib/git-ls/releases/download/v3.5.0/git-ls_Linux_x86_64.tar.gz"
+      sha256 "db515aef6aca3b1c15422656f125799ff068849dcd187e8207d38b88ba73bbf3"
       def install
         bin.install "git-ls"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/llimllib/git-ls/releases/download/v3.4.0/git-ls_Linux_arm64.tar.gz"
-      sha256 "2352dcb09dedb38e5bd8c7fcdeb0bd090a95b6dc16c28e37cb2e6f1eaf597b9f"
+      url "https://github.com/llimllib/git-ls/releases/download/v3.5.0/git-ls_Linux_arm64.tar.gz"
+      sha256 "d1af58229982fad36d3337b63b018f910f08fc92e9cf13b70ff7aa98477bd60b"
       def install
         bin.install "git-ls"
       end
