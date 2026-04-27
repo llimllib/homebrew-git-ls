@@ -5,13 +5,13 @@
 class GitLs < Formula
   desc "list the files in the current directory along with a useful summary and helpful hyperlinks."
   homepage "https://github.com/llimllib/git-ls"
-  version "5.11.0"
+  version "5.12.0"
   license "Unlicense"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/llimllib/git-ls/releases/download/v5.11.0/git-ls_Darwin_x86_64.tar.gz"
-      sha256 "4f255ce7c854197b84254c9e59283a66a02d7a4d32aa9f7d5f7c5c75e6caeffa"
+      url "https://github.com/llimllib/git-ls/releases/download/v5.12.0/git-ls_Darwin_x86_64.tar.gz"
+      sha256 "2095df0f7743eb8dcad964e7471585112c3ad5c4962e582ea143c2a4852a0146"
 
       define_method(:install) do
         bin.install "git-ls"
@@ -19,8 +19,8 @@ class GitLs < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/llimllib/git-ls/releases/download/v5.11.0/git-ls_Darwin_arm64.tar.gz"
-      sha256 "0f19f2aba30f496c862fad4a78e4cbf4330d9f8a9fff68fc91cd0741ba2be472"
+      url "https://github.com/llimllib/git-ls/releases/download/v5.12.0/git-ls_Darwin_arm64.tar.gz"
+      sha256 "cd2257674cd1994641fc71479400ab3583fdcecf8bf806094b96ad04a7d4e1fa"
 
       define_method(:install) do
         bin.install "git-ls"
@@ -31,16 +31,16 @@ class GitLs < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/llimllib/git-ls/releases/download/v5.11.0/git-ls_Linux_x86_64.tar.gz"
-      sha256 "b590bc9a7431ece8adc89c13bf30dde47f0ccd00f1974beeb962252e658cc8ae"
+      url "https://github.com/llimllib/git-ls/releases/download/v5.12.0/git-ls_Linux_x86_64.tar.gz"
+      sha256 "0a1628883fd0c0b93169d1a98ec02ba3de767ab223fb2b088a0ac3b65e47cc60"
       define_method(:install) do
         bin.install "git-ls"
         man1.install "manpage/git-ls.1"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/llimllib/git-ls/releases/download/v5.11.0/git-ls_Linux_arm64.tar.gz"
-      sha256 "c5b5a6be8c57075b4ecfb0effaa00d97280277a8fa215adc113c73d0d419a5c9"
+      url "https://github.com/llimllib/git-ls/releases/download/v5.12.0/git-ls_Linux_arm64.tar.gz"
+      sha256 "4ac0401de0443074a45405036edb331cea0fb475917c18feb65749c782fbe225"
       define_method(:install) do
         bin.install "git-ls"
         man1.install "manpage/git-ls.1"
